@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shyam Nursing Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor">
+  <div class="cursor-dot" id="cursorDot"></div>
+</div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">🏥</div>
+    <div>
+      <div class="logo-text">Shyam <span>Nursing</span> Home</div>
+      <div class="logo-sub">Care · Compassion · Cure</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#doctors">Doctors</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-btn" onclick="openBookingModal()">Book Appointment</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Trusted Healthcare Since 1998
+    </div>
+    <h1>
+      Your Health,<br>
+      Our <span class="accent">Sacred</span><br>
+      <span class="gold">Commitment</span>
+    </h1>
+    <p class="hero-desc">
+      Shyam Nursing Home delivers world-class medical care with a personal touch. 
+      Expert doctors, modern facilities, and compassionate staff — all under one roof.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openBookingModal()">📅 Book Appointment</button>
+      <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">🔍 Our Services</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">25<span>+</span></div>
+        <div class="stat-label">Years of Care</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15<span>k+</span></div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">Specialist Doctors</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div style="position:relative;">
+      <div class="hero-card">
+        <div class="card-header">
+          <span class="card-title">Departments</span>
+          <span class="card-live"><span class="live-dot"></span> Open Now</span>
+        </div>
+        <div class="dept-list">
+          <div class="dept-item">
+            <div class="dept-icon" style="background:rgba(239,68,68,0.15);">❤️</div>
+            <div class="dept-info">
+              <div class="dept-name">Cardiology</div>
+              <div class="dept-avail">Dr. Sharma · 3 available</div>
+            </div>
+            <span class="dept-tag tag-open">Open</span>
+          </div>
+          <div class="dept-item">
+            <div class="dept-icon" style="background:rgba(59,130,246,0.15);">🧠</div>
+            <div class="dept-info">
+              <div class="dept-name">Neurology</div>
+              <div class="dept-avail">Dr. Gupta · 1 available</div>
+            </div>
+            <span class="dept-tag tag-open">Open</span>
+          </div>
+          <div class="dept-item">
+            <div class="dept-icon" style="background:rgba(168,85,247,0.15);">🦷</div>
+            <div class="dept-info">
+              <div class="dept-name">Dental</div>
+              <div class="dept-avail">Dr. Verma · 2 slots left</div>
+            </div>
+            <span class="dept-tag tag-busy">Busy</span>
+          </div>
+          <div class="dept-item">
+            <div class="dept-icon" style="background:rgba(34,197,94,0.15);">👶</div>
+            <div class="dept-info">
+              <div class="dept-name">Pediatrics</div>
+              <div class="dept-avail">Dr. Singh · Walk-in OK</div>
+            </div>
+            <span class="dept-tag tag-open">Open</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-1">
+        <div class="float-inner">
+          <span class="float-icon">⭐</span>
+          <div class="float-text">
+            <div class="f-num">4.9/5</div>
+            <div class="f-label">Patient Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="float-card float-card-2">
+        <div class="float-inner">
+          <span class="float-icon">🚑</span>
+          <div class="float-text">
+            <div class="f-num">24/7</div>
+            <div class="f-label">Emergency Care</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-label reveal">What We Offer</div>
+  <div class="section-title reveal">Comprehensive<br>Medical Services</div>
+  <p class="section-desc reveal">From routine checkups to advanced surgical care, we provide a full spectrum of healthcare services with cutting-edge equipment.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(239,68,68,0.12);">❤️</div>
+      <h3>Cardiology</h3>
+      <p>Advanced heart care including ECG, Echo, angiography, and cardiac surgery by experienced cardiologists.</p>
+      <div class="s-arrow">→</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(13,148,136,0.12);">🩺</div>
+      <h3>General Medicine</h3>
+      <p>Comprehensive diagnosis and treatment for common illnesses, infections, diabetes, and chronic conditions.</p>
+      <div class="s-arrow">→</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(168,85,247,0.12);">🔬</div>
+      <h3>Pathology Lab</h3>
+      <p>In-house diagnostic lab with blood tests, urine analysis, culture tests, and same-day reports available.</p>
+      <div class="s-arrow">→</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(34,197,94,0.12);">👶</div>
+      <h3>Pediatrics</h3>
+      <p>Specialized child healthcare, vaccinations, growth monitoring, and neonatal intensive care unit (NICU).</p>
+      <div class="s-arrow">→</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(245,158,11,0.12);">🦴</div>
+      <h3>Orthopedics</h3>
+      <p>Bone, joint, and spine treatments including fracture management, replacement surgery, and physiotherapy.</p>
+      <div class="s-arrow">→</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="s-icon" style="background:rgba(59,130,246,0.12);">🚑</div>
+      <h3>Emergency Care</h3>
+      <p>Round-the-clock emergency services with trained trauma specialists, ICU, and ambulance facility.</p>
+      <div class="s-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="about">
+  <div class="why-grid">
+    <div class="why-visual reveal">
+      <div class="orbit"><div class="orbit-dot"></div></div>
+      <div class="why-circle">🏥</div>
+    </div>
+    <div>
+      <div class="section-label reveal">Why Choose Us</div>
+      <div class="section-title reveal" style="margin-bottom:40px;">Healing with<br>Heart & Science</div>
+      <div class="why-points">
+        <div class="why-point reveal">
+          <div class="why-num">01</div>
+          <div>
+            <h4>Expert Medical Team</h4>
+            <p>Our doctors are trained from top medical institutions and bring decades of combined experience.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num">02</div>
+          <div>
+            <h4>Modern Equipment</h4>
+            <p>Equipped with latest MRI, CT Scan, digital X-Ray, and laparoscopic surgery tools.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num">03</div>
+          <div>
+            <h4>Affordable & Transparent</h4>
+            <p>Clear pricing, insurance support, and flexible payment plans — quality care without financial stress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section" id="doctors">
+  <div class="section-label reveal">Our Team</div>
+  <div class="section-title reveal">Meet Our Specialists</div>
+  <p class="section-desc reveal">Experienced, compassionate, and dedicated doctors ready to serve you.</p>
+
+  <div class="doctors-grid">
+    <div class="doctor-card reveal">
+      <div class="doctor-avatar">👨‍⚕️</div>
+      <div class="doctor-name">Dr. R. Sharma</div>
+      <div class="doctor-spec">Cardiologist</div>
+      <div class="doctor-exp">20+ Years Experience</div>
+    </div>
+    <div class="doctor-card reveal">
+      <div class="doctor-avatar">👩‍⚕️</div>
+      <div class="doctor-name">Dr. P. Gupta</div>
+      <div class="doctor-spec">Neurologist</div>
+      <div class="doctor-exp">15+ Years Experience</div>
+    </div>
+    <div class="doctor-card reveal">
+      <div class="doctor-avatar">👨‍⚕️</div>
+      <div class="doctor-name">Dr. A. Verma</div>
+      <div class="doctor-spec">Orthopedic</div>
+      <div class="doctor-exp">18+ Years Experience</div>
+    </div>
+    <div class="doctor-card reveal">
+      <div class="doctor-avatar">👩‍⚕️</div>
+      <div class="doctor-name">Dr. S. Singh</div>
+      <div class="doctor-spec">Pediatrician</div>
+      <div class="doctor-exp">12+ Years Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT STRIP -->
+<div class="appt-section reveal" id="contact">
+  <div>
+    <div class="appt-label">Get in Touch</div>
+    <div class="appt-title">Ready to Book Your Appointment?</div>
+    <p class="appt-desc">Walk in anytime or call us to schedule a consultation. We're here 24/7 for your health needs.</p>
+  </div>
+  <div class="appt-actions">
+    <div class="phone-badge">📞 +91 98765-XXXXX</div>
+    <button class="btn-primary" style="width:100%;" onclick="openBookingModal()">Book Online Now</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Shyam <span>Nursing</span> Home</div>
+  <div class="footer-tagline">Care · Compassion · Cure — Since 1998</div>
+  <div class="footer-links">
+    <a href="#">Services</a>
+    <a href="#">Doctors</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <div class="footer-copy">© 2024 Shyam Nursing Home. All rights reserved.</div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingOverlay" onclick="if(event.target===this) closeBookingModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeBookingModal()" aria-label="Close">✕</button>
+
+    <div id="formView">
+      <div class="modal-header">
+        <div class="section-label" style="margin-bottom:8px;">Book Your Visit</div>
+        <h3 class="modal-title">Request an Appointment</h3>
+        <p class="modal-sub">Fill this in and we'll confirm by phone shortly.</p>
+      </div>
+
+      <form id="bookingForm" action="https://formspree.io/f/mbdnljqq" method="POST">
+        <input type="hidden" name="_subject" value="New Appointment Request — Shyam Nursing Home">
+
+        <label class="form-label">Full Name</label>
+        <input class="form-input" type="text" name="name" required placeholder="e.g. Ramesh Kumar">
+
+        <label class="form-label">Phone Number</label>
+        <input class="form-input" type="tel" name="phone" required placeholder="e.g. 98765 43210">
+
+        <label class="form-label">Department</label>
+        <select class="form-input" name="department" required>
+          <option value="">Select a department</option>
+          <option>Cardiology</option>
+          <option>General Medicine</option>
+          <option>Pathology Lab</option>
+          <option>Pediatrics</option>
+          <option>Orthopedics</option>
+          <option>Emergency Care</option>
+        </select>
+
+        <label class="form-label">Preferred Date</label>
+        <input class="form-input" type="date" name="preferred_date" required>
+
+        <label class="form-label">Message (optional)</label>
+        <textarea class="form-input" name="message" rows="3" placeholder="Any symptoms or notes for the doctor..."></textarea>
+
+        <button type="submit" class="btn-primary" style="width:100%; margin-top:8px;" id="submitBtn">Send Request</button>
+      </form>
+
+      <div class="modal-divider"><span>or</span></div>
+
+      <a id="whatsappLink" class="btn-outline whatsapp-btn" href="#" target="_blank" rel="noopener">
+        💬 Book via WhatsApp instead
+      </a>
+    </div>
+
+    <div id="successView" style="display:none; text-align:center; padding: 20px 0;">
+      <div style="font-size:48px; margin-bottom:16px;">✅</div>
+      <h3 class="modal-title">Request Sent!</h3>
+      <p class="modal-sub">We've received your appointment request and will call you shortly to confirm.</p>
+      <button class="btn-primary" style="margin-top:20px;" onclick="closeBookingModal()">Done</button>
+    </div>
+
+    <div id="errorView" style="display:none; text-align:center; padding: 20px 0;">
+      <div style="font-size:48px; margin-bottom:16px;">⚠️</div>
+      <h3 class="modal-title">Couldn't Send Request</h3>
+      <p class="modal-sub">Something went wrong. Please call us directly or try WhatsApp below.</p>
+      <a id="whatsappLinkError" class="btn-primary" style="margin-top:20px; display:inline-block;" href="#" target="_blank" rel="noopener">💬 Book via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
